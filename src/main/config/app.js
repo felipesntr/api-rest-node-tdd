@@ -6,4 +6,9 @@ app.get('/', (req, res) => {
     });
 });
 
+app.get('/users', (req, res) => {
+    const users = [{ name: 'John Doe', mail: 'mail@mail.com' }];
+    res.status(200).json(users);
+})
+
 module.exports = app;
