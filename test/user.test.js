@@ -8,4 +8,14 @@ describe('User', () => {
         expect(response.body).toHaveLength(1);
         expect(response.body[0]).toHaveProperty('name', 'John Doe');
     });
+
+    it('Deve inserir um usuário com sucesso', async () => {
+        const response = await request(app).post('/users').send({
+            name: 'Will Smith',
+            mail: 'mail@mail.com'
+        });
+        expect(response.status).toBe(201);
+        expect(response.body).toHaveProperty('name', 'Will Smith');
+        expect(response.body).toHaveProperty('mail', 'mail@mail.com');
+    });
 })
