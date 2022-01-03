@@ -1,5 +1,5 @@
 const supertest = require("supertest");
-const app = require('../src/main/config/app.js');
+const app = require('../src/app');
 
 describe('App', () => {
 

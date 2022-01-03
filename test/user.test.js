@@ -1,4 +1,4 @@
-const app = require('../src/main/config/app.js');
+const app = require('../src/app');
 const request = require("supertest")
 
 describe('User', () => {
